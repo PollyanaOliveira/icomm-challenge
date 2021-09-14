@@ -1,5 +1,12 @@
 import { createContext } from 'react';
 
-const Context = createContext();
+import clothes from '../data';
+
+const INITIAL_STATE = {
+  products: [...clothes],
+  cart: [],
+};
+
+const Context = createContext(INITIAL_STATE);
 
 export default Context;
