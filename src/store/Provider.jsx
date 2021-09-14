@@ -4,9 +4,11 @@ import Context from './Context';
 
 import { setLocalStorage } from '../helpers/localStorage';
 
+import clothes from '../data';
+
 export default function Provider({ children }) {
   const [cart, setCart] = useState([]);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([...clothes]);
   const [itemsFavorite, setItemsFavorite] = useState([]);
   const [quantity, setQuantity] = useState([]);
 
