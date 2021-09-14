@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from '../components/Header';
+import FeaturedProducts from '../components/FeaturedProducts';
 
 import image5 from '../../images/image_5.png';
 import image6 from '../../images/image_6.png';
@@ -29,6 +30,10 @@ export default function Home() {
       </section>
       <section>
         <h2>DESTAQUES</h2>
+      </section>
+      <section className="homeContent">
+        <h2>DESTAQUES</h2>
+        <FeaturedProducts />
       </section>
     </main>
   );
