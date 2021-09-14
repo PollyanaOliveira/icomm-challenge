@@ -3,6 +3,8 @@ import React, { useContext } from 'react';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
 
+import Context from '../../store/Context';
+
 export default function NavHeader() {
   const {
     cart,
@@ -10,7 +12,7 @@ export default function NavHeader() {
     setCart,
     handleClear,
     setQuantity,
-  } = useContext();
+  } = useContext(Context);
 
   const productsCart = setQuantity(false, cart);
 
@@ -22,7 +24,7 @@ export default function NavHeader() {
           onClick={handleClear}
         >
           <div>
-            {(products.some((item) => item.favorited)) ? <FaHeart /> : <FaRegHeart /> }
+            {(products.some((item) => item.favorite)) ? <FaHeart /> : <FaRegHeart /> }
           </div>
         </li>
         <li
