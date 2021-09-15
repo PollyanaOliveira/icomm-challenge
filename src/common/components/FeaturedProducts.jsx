@@ -6,7 +6,7 @@ import Context from '../../store/Context';
 
 export default function FeaturedProducts() {
   const {
-    products, setProducts, itemsFavorite, setItemsFavorite, addCart,
+    products, favoriteProduct, addCart, itemsFavorite,
   } = useContext(Context);
 
   const tagsProducts = (tag) => {
@@ -23,17 +23,20 @@ export default function FeaturedProducts() {
     return '';
   };
 
-  const renderTagAndFavorite = (id, tag, favorite) => (
-    <div>
-      <p className={tagsProducts()}>{tag}</p>
-      <button
-        type="button"
-        onClick={() => setProducts(setItemsFavorite(itemsFavorite(products, id)))}
-      >
-        {(favorite) ? <FaHeart /> : <FaRegHeart />}
-      </button>
-    </div>
-  );
+  const renderTagAndFavorite = (id, tag, product) => {
+    const productExist = itemsFavorite.find((item) => item.id === id);
+    return (
+      <div>
+        <p className={tagsProducts()}>{tag}</p>
+        <button
+          type="button"
+          onClick={() => favoriteProduct(id, product)}
+        >
+          {(productExist) ? <FaHeart /> : <FaRegHeart />}
+        </button>
+      </div>
+    );
+  };
 
   const renderTitleAndImage = (title, image) => (
     <div>
@@ -67,11 +70,11 @@ export default function FeaturedProducts() {
       <div>
         {products.map((product) => {
           const {
-            id, tag, favorite, title, image, price, instalments,
+            id, tag, title, image, price, instalments,
           } = product;
           return (
             <div>
-              {renderTagAndFavorite(id, tag, favorite)}
+              {renderTagAndFavorite(id, tag, product)}
               {renderTitleAndImage(title, image)}
               {renderPriceAndInstalments(price, instalments)}
               {buyButton(id, product)}
