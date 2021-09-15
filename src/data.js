@@ -12,7 +12,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'VERÃO 2022',
     image: image1,
-    favorite: false,
   },
   {
     id: 2,
@@ -22,7 +21,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '20% OFF',
     image: image2,
-    favorite: false,
   },
   {
     id: 3,
@@ -32,7 +30,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '',
     image: image3,
-    favorite: false,
   },
   {
     id: 4,
@@ -42,7 +39,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'LANÇAMENTO',
     image: image4,
-    favorite: false,
   },
   {
     id: 5,
@@ -52,7 +48,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '',
     image: image3,
-    favorite: false,
   },
   {
     id: 6,
@@ -62,7 +57,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '20% OFF',
     image: image2,
-    favorite: false,
   },
   {
     id: 7,
@@ -72,7 +66,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'LANÇAMENTO',
     image: image4,
-    favorite: false,
   },
   {
     id: 8,
@@ -82,7 +75,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'VERÃO 2022',
     image: image1,
-    favorite: false,
   },
   {
     id: 9,
@@ -92,7 +84,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '',
     image: image3,
-    favorite: false,
   },
   {
     id: 10,
@@ -102,7 +93,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'LANÇAMENTO',
     image: image4,
-    favorite: false,
   },
   {
     id: 11,
@@ -112,7 +102,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '20% OFF',
     image: image2,
-    favorite: false,
   },
   {
     id: 12,
@@ -122,7 +111,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'VERÃO 2022',
     image: image1,
-    favorite: false,
   },
   {
     id: 13,
@@ -132,7 +120,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'LANÇAMENTO',
     image: image4,
-    favorite: false,
   },
   {
     id: 14,
@@ -142,7 +129,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '',
     image: image3,
-    favorite: false,
   },
   {
     id: 15,
@@ -152,7 +138,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: 'VERÃO 2022',
     image: image1,
-    favorite: false,
   },
   {
     id: 16,
@@ -162,7 +147,6 @@ const clothes = [
     instalments: '12 X R$ 63,25',
     tag: '20% OFF',
     image: image2,
-    favorite: false,
   },
 ];
 
