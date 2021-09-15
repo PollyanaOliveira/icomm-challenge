@@ -35,27 +35,33 @@ export default function Provider({ children }) {
     }
   };
 
-  const removeCart = (product) => {
-    const updateCart = [...cart];
-    const productExist = updateCart.find((item) => item.id === product);
-    const newCart = updateCart.filter((item) => item.id !== product);
-    if (productExist) return setLocalStorage(newCart);
-    return productExist;
+  const remove = (id, data) => {
+    const update = data.filter((product) => product.id !== id);
+    return update;
   };
 
-  const favoriteCart = (id) => {
-    const favoriteProducts = [...products];
-    const favoriteExist = favoriteProducts.find((item) => item.id === id);
-    const updateFavorite = favoriteProducts.indexOf(favoriteExist);
-    favoriteProducts[updateFavorite] = !favoriteProducts[updateFavorite];
-    setLocalStorage((setItemsFavorite(favoriteProducts)));
-    return favoriteProducts;
+  const favoriteProduct = (id, product) => {
+    const favorited = [...itemsFavorite];
+    const favoriteItem = { ...product };
+    const FavoriteExist = favorited.find((item) => item.id === id);
+    const LSFavorite = 'LS_Favorite';
+
+    if (FavoriteExist) {
+      const updatedFavorite = remove(id, favorited);
+      setLocalStorage(LSFavorite, updatedFavorite);
+      setItemsFavorite(updatedFavorite);
+    } else {
+      const updatedFavorite = [
+        ...itemsFavorite,
+        favoriteItem,
+      ];
+      setLocalStorage(LSFavorite, updatedFavorite);
+      setItemsFavorite(updatedFavorite);
+    }
   };
 
-  const handleClear = () => {
-    const items = [...products];
-    items.forEach((item) => items[item]);
-    setProducts((setItemsFavorite(items.favorite = false)));
+  const clearFavorite = () => {
+    setItemsFavorite([]);
   };
 
   const context = {
@@ -63,14 +69,11 @@ export default function Provider({ children }) {
     products,
     itemsFavorite,
     quantity,
-    // setCart,
     setProducts,
-    setItemsFavorite,
     setQuantity,
     addCart,
-    removeCart,
-    favoriteCart,
-    handleClear,
+    favoriteProduct,
+    clearFavorite,
   };
 
   return (
