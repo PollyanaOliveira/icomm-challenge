@@ -9,12 +9,11 @@ export default function NavHeader() {
   const {
     cart,
     itemsFavorite,
-    setCart,
     clearFavorite,
-    setQuantity,
+    clearCart,
   } = useContext(Context);
 
-  const productsCart = setQuantity(false, cart);
+  const productsInCart = cart.length;
 
   const favorite = () => ((!itemsFavorite.length) ? <FaRegHeart /> : <FaHeart />);
 
@@ -31,13 +30,13 @@ export default function NavHeader() {
         </li>
         <li
           aria-hidden
-          onClick={() => setCart()}
+          onClick={() => clearCart()}
         >
           <div>
             <FiShoppingCart />
-            {(productsCart !== 0) && (
+            {(productsInCart !== 0) && (
             <div>
-              <div>{productsCart === 1 ? `${productsCart} item` : `${productsCart} itens`}</div>
+              <div>{productsInCart === 1 ? `${productsInCart}` : `${productsInCart}`}</div>
             </div>
             )}
           </div>
