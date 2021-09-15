@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { node } from 'prop-types';
 import Context from './Context';
 
-import { setLocalStorage } from '../helpers/localStorage';
+import { setLocalStorage } from '../helpers';
 
 import clothes from '../data';
 
@@ -10,7 +10,6 @@ export default function Provider({ children }) {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([...clothes]);
   const [itemsFavorite, setItemsFavorite] = useState([]);
-  const [quantity, setQuantity] = useState([]);
 
   const addCart = (id, product) => {
     const updateCart = [...cart];
@@ -64,16 +63,19 @@ export default function Provider({ children }) {
     setItemsFavorite([]);
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   const context = {
     cart,
     products,
     itemsFavorite,
-    quantity,
     setProducts,
-    setQuantity,
     addCart,
     favoriteProduct,
     clearFavorite,
+    clearCart,
   };
 
   return (
