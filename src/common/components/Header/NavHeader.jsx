@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
 
-import Context from '../../store/Context';
+import Context from '../../../store/Context';
 
 export default function NavHeader() {
   const {
@@ -15,30 +15,28 @@ export default function NavHeader() {
 
   const productsInCart = cart.length;
 
-  const favorite = () => ((!itemsFavorite.length) ? <FaRegHeart /> : <FaHeart />);
+  const favorite = () => ((!itemsFavorite.length) ? '' : <FaHeart />);
 
   return (
     <section>
-      <ul>
+      <ul className="nav__list">
         <li
+          className="nav__item"
           aria-hidden
           onClick={() => clearFavorite()}
         >
-          <div>
+          <div className="nav__favorites">
             {favorite()}
           </div>
         </li>
         <li
+          className="nav__item"
           aria-hidden
           onClick={() => clearCart()}
         >
-          <div>
-            <FiShoppingCart />
-            {(productsInCart !== 0) && (
-            <div>
-              <div>{productsInCart === 1 ? `${productsInCart}` : `${productsInCart}`}</div>
-            </div>
-            )}
+          <div className="nav__cart show__cart">
+            <FiShoppingCart className="nav__icon" />
+            <div className="cart__count">{productsInCart}</div>
           </div>
         </li>
         <div />
