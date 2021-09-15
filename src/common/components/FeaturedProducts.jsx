@@ -6,7 +6,7 @@ import Context from '../../store/Context';
 
 export default function FeaturedProducts() {
   const {
-    cart, products, setCart, setProducts, itemsFavorite, setItemsFavorite, addCart,
+    products, setProducts, itemsFavorite, setItemsFavorite, addCart,
   } = useContext(Context);
 
   const tagsProducts = (tag) => {
@@ -51,11 +51,11 @@ export default function FeaturedProducts() {
     </div>
   );
 
-  const buyButton = () => (
+  const buyButton = (id, product) => (
     <div>
       <button
         type="button"
-        onClick={() => setCart(addCart(products, cart))}
+        onClick={() => addCart(id, product)}
       >
         COMPRAR
       </button>
@@ -74,7 +74,7 @@ export default function FeaturedProducts() {
               {renderTagAndFavorite(id, tag, favorite)}
               {renderTitleAndImage(title, image)}
               {renderPriceAndInstalments(price, instalments)}
-              {buyButton()}
+              {buyButton(id, product)}
             </div>
           );
         })}
