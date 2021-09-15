@@ -8,28 +8,30 @@ import Context from '../../store/Context';
 export default function NavHeader() {
   const {
     cart,
-    products,
+    itemsFavorite,
     setCart,
-    handleClear,
+    clearFavorite,
     setQuantity,
   } = useContext(Context);
 
   const productsCart = setQuantity(false, cart);
+
+  const favorite = () => ((!itemsFavorite.length) ? <FaRegHeart /> : <FaHeart />);
 
   return (
     <section>
       <ul>
         <li
           aria-hidden
-          onClick={handleClear}
+          onClick={() => clearFavorite()}
         >
           <div>
-            {(products.some((item) => item.favorite)) ? <FaHeart /> : <FaRegHeart /> }
+            {favorite()}
           </div>
         </li>
         <li
           aria-hidden
-          onClick={() => setCart(cart([]))}
+          onClick={() => setCart()}
         >
           <div>
             <FiShoppingCart />
