@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { node } from 'prop-types';
 import Context from './Context';
 
-import { setLocalStorage } from '../helpers';
+import { setLocalStorage, getStorage } from '../helpers';
 
 import clothes from '../data';
 
@@ -11,11 +11,13 @@ export default function Provider({ children }) {
   const [products, setProducts] = useState([...clothes]);
   const [itemsFavorite, setItemsFavorite] = useState([]);
 
+  const LSCart = 'LS_Cart';
+  const LSFavorite = 'LS_Favorite';
+
   const addCart = (id, product) => {
     const updateCart = [...cart];
     const productItem = { ...product };
     const productExist = updateCart.find((item) => item.id === id);
-    const LSCart = 'LS_Cart';
 
     if (productExist) {
       const findIndex = updateCart.indexOf(productExist);
@@ -43,7 +45,6 @@ export default function Provider({ children }) {
     const favorited = [...itemsFavorite];
     const favoriteItem = { ...product };
     const FavoriteExist = favorited.find((item) => item.id === id);
-    const LSFavorite = 'LS_Favorite';
 
     if (FavoriteExist) {
       const updatedFavorite = remove(id, favorited);
@@ -77,6 +78,9 @@ export default function Provider({ children }) {
     clearFavorite,
     clearCart,
   };
+
+  useEffect(() => { setCart(getStorage(LSCart)); }, []);
+  useEffect(() => { setItemsFavorite(getStorage(LSFavorite)); }, []);
 
   return (
     <Context.Provider value={context}>

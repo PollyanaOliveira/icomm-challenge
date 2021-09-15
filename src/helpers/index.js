@@ -4,6 +4,5 @@ export const setLocalStorage = (key, value) => {
 };
 
 // GET LOCALSTORAGE
-export const getStorage = (key, value) => {
-  JSON.parse(localStorage.getItem(key, value));
-};
+export const getStorage = (key, value = []) => (
+  JSON.parse(localStorage.getItem(key)) || value);
