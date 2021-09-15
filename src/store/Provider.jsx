@@ -12,22 +12,27 @@ export default function Provider({ children }) {
   const [itemsFavorite, setItemsFavorite] = useState([]);
   const [quantity, setQuantity] = useState([]);
 
-  const addCart = (product, items) => {
-    const updateCart = [...cart]; // atualizar o array original
-    const productExist = updateCart.find((item) => item.id === product);
-    const totalAmount = productExist ? productExist.amount : 0;
-    // totalAmount: quantidade de produtos no carrinho
-    const amount = totalAmount + 1;
+  const addCart = (id, product) => {
+    const updateCart = [...cart];
+    const productItem = { ...product };
+    const productExist = updateCart.find((item) => item.id === id);
+    const LSCart = 'LS_Cart';
+
     if (productExist) {
-      totalAmount.amount = amount; // atualiza o updatecart
+      const findIndex = updateCart.indexOf(productExist);
+      updateCart[findIndex].amount += 1;
+
+      setLocalStorage(LSCart, updateCart);
+      setCart(updateCart);
     } else {
-      const updateProducts = {
-        ...items,
-        amount: 1,
-      };
-      updateCart.push(updateProducts);
+      productItem.amount += 1;
+      const updatedCart = [
+        ...cart,
+        productItem,
+      ];
+      setLocalStorage(LSCart, updatedCart);
+      setCart(updatedCart);
     }
-    setLocalStorage(updateCart);
   };
 
   const removeCart = (product) => {
@@ -58,7 +63,7 @@ export default function Provider({ children }) {
     products,
     itemsFavorite,
     quantity,
-    setCart,
+    // setCart,
     setProducts,
     setItemsFavorite,
     setQuantity,
