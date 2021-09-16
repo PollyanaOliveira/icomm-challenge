@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+:root {
+  --header-height: 3.5rem;
+  --heart-height: 45px;
+
+  /* COLORS */
+  --first-color:#824D3E;
+  --second-color: #C42130;
+  --third-color: #444444;
+  --title-color: #161212;
+  --title-home-color: #5361FF;
+  --text-color: #666666;
+  --body-color: ##E5E5E5;
+  --white-color: #FFF;
+
+    /* FONT WEIGTHT */
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-bolder: 900;
+
+  /* FONT AND SIZE */
+  --first-font: 'Nunito', sans-serif;
+  --second-font: 'Montserrat', sans-serif;
+  --font-h2: 1.25rem;
+  --font-h3: 1.125rem;
+  --font-icon: 1.5rem;
+  --little-font: .938rem;
+  --small-font: .813rem;
+  --normal-font: 1.3rem;
+  --big-font: 2rem;
+
+  /*Z-INDEX */
+
+  --z-index-1: 1;
+  --z-index2: 2;
+  --z-index-fixed: 100;
+
+  /* MARGINS */
+  --mg-05: .5rem;
+  --mg-08: .8rem;
+  --mg-1: 1rem;
+  --mg-2: 2rem;
+  --mg-3: 4rem;
+  --mg-4: 5rem;
+  --mg-5: 6.5rem;
+  --mg-6: 8rem;
+  --mg-7: 10rem;
+  --mg-8: 1.3rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* BASE */
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--first-font);
+}
+
+h1,h2,h3{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+h1,h2,h3,ul,li,p {
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-family: var(--first-font);
+  font-size: var(--little-font);
+  background: inherit;
+  border: none;
+  border-radius: inherit;
 }
