@@ -1,8 +1,18 @@
 import React, { useContext } from 'react';
-
+import Carousel from 'react-elastic-carousel';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import * as Styled from './styles';
 
-import Context from '../../store/Context';
+import './products.css';
+
+import Context from '../../../store/Context';
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 968, itemsToShow: 4 },
+];
 
 export default function FeaturedProducts() {
   const {
@@ -26,9 +36,10 @@ export default function FeaturedProducts() {
   const renderTagAndFavorite = (id, tag, product) => {
     const productExist = itemsFavorite.find((item) => item.id === id);
     return (
-      <div>
-        <p className={tagsProducts()}>{tag}</p>
+      <div className="favorite__icon">
+        <p className={tagsProducts(tag)}>{tag}</p>
         <button
+          className="favorite_button"
           type="button"
           onClick={() => favoriteProduct(id, product)}
         >
@@ -39,24 +50,25 @@ export default function FeaturedProducts() {
   };
 
   const renderTitleAndImage = (title, image) => (
-    <div>
+    <div className="info__products">
       <img src={image} alt="produto" />
-      <h3>{title}</h3>
+      <h3 className="title__product">{title}</h3>
     </div>
   );
 
   const renderPriceAndInstalments = (price, instalments) => (
-    <div>
-      <div>
+    <div className="info__products">
+      <div className="price__product">
         {`R$ ${price.toLocaleString('pt-br', { digits: 2 })}`}
       </div>
-      <p>{instalments}</p>
+      <p className="instalments__product">{instalments}</p>
     </div>
   );
 
   const buyButton = (id, product) => (
-    <div>
+    <div className="product__button">
       <button
+        className="buy__button"
         type="button"
         onClick={() => addCart(id, product)}
       >
@@ -67,20 +79,24 @@ export default function FeaturedProducts() {
 
   const renderCard = () => (
     <section>
-      <div>
-        {products.map((product) => {
-          const {
-            id, tag, title, image, price, instalments,
-          } = product;
-          return (
-            <div>
-              {renderTagAndFavorite(id, tag, product)}
-              {renderTitleAndImage(title, image)}
-              {renderPriceAndInstalments(price, instalments)}
-              {buyButton(id, product)}
-            </div>
-          );
-        })}
+      <div className="products__main">
+        <Styled.Carousel>
+          <Carousel breakPoints={breakPoints}>
+            {products.map((product) => {
+              const {
+                id, tag, title, image, price, instalments,
+              } = product;
+              return (
+                <div className="render__products">
+                  {renderTagAndFavorite(id, tag, product)}
+                  {renderTitleAndImage(title, image)}
+                  {renderPriceAndInstalments(price, instalments)}
+                  {buyButton(id, product)}
+                </div>
+              );
+            })}
+          </Carousel>
+        </Styled.Carousel>
       </div>
     </section>
   );
