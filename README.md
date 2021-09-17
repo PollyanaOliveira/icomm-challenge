@@ -1,70 +1,80 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p  align="center"><img  width='200px'  src='https://github.com/PollyanaOliveira/icomm-challenge/blob/main/src/images/readme.gif'  />
 
-## Available Scripts
+<h1  align="center">Icomm Challenge</h1>  </p>
 
-In the project directory, you can run:
+## 👩🏾‍💻 Desenvolvido por
 
-### `npm start`
+[@PollyanaOliveira](https://github.com/PollyanaOliveira)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 💡Objetivos do Projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Icomm Challenge é um e-commerce, com uma versão simplificada, sem a persistência de um banco de dados, sendo possível:
+-   Visualizar os produtos;
+-   Interagir com os produtos , adicionando aos favoritos e/ou adicionado-os no carrinho de compras;
+-   Caso algum produto seja adicionado ao carrinho de compras e/ou favoritos o usuário poderá visualizar a quantidade de itens no carrinho e se há produtos favoritados no ícone de coração;
+-   Interagir com os produtos através do carousel, e
+-   Por fim, utilizar a aplicação de forma responsiva tanto em aparelhos mobiles quanto desktops.
 
-### `npm test`
+<details>
+  <summary>Detalhes do Desafio</summary>
+  
+  # ICOMM Group
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ## O Teste
+  
+  - Utilize React;
+  - Monte a estrutura de dados mock;
+  - Utilize alguma lib de slider ou carousel;
+  - Faça responsivo;
 
-### `npm run build`
+ ### Diferencial, não obrigatório
+  - Crie um controle de estado para o carrinho com context api do React;
+  - Faça deploy do app em algum serviço de cloud como netlify, vercel ou github-pages;
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🗺️ Roteiro
+1. Análise dos requisitos presentes no modelo de negócios;
+2. Análise dos elementos do protótipo recebido;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  ⚒️ Tecnologias Utilizadas
+<div>
+  <img src="https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/-CSS-1572B6?style=flat-square&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/-JavaScript-yellow?style=flat-square&logo=JavaScript&logoColor=white">
+  <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=React&logoColor=black">
+  <img src="https://img.shields.io/badge/-Hooks-61DAFB?style=flat-square&logo=React&logoColor=black">
+  <img src="https://img.shields.io/badge/-RTL-61DAFB?style=flat-square&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white">
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎲 Protótipo do Projeto
+A base de dados foi mockada mediante informações disponibilizadas no protótipo do projeto, conforme link abaixo:
+- [Protótipo do projeto - Figma](https://www.figma.com/file/wkI0KBTW5lcpk3WUoyBJWu/Teste-Frontend?node-id=0%3A1)
 
-### `npm run eject`
+## ✅ Para Iniciar o Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ - Clone o projeto no seu computador, com os comandos abaixo: 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> git clone git@github.com:PollyanaOliveira/icomm-challenge.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ - Entre da pasta do repositório que você acabou de clonar:
+ 
+> cd icomm-challenge
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ - Instale as dependências:
 
-## Learn More
+> npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ - Para iniciar o projeto localmente, utilize o seguinte comando:
+ 
+> npm start
+ - O projeto vai iniciar em: http://localhost:3000/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deploy
 
-### Code Splitting
+- Para visualizar direto em seu navegador, sem a necessidade de clonar, acesse:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🌎 [Icomm Challenge](https://github.com/PollyanaOliveira)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
