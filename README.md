@@ -75,6 +75,6 @@ A base de dados foi mockada mediante informações disponibilizadas no protótip
 
 - Para visualizar direto em seu navegador, sem a necessidade de clonar, acesse:
 
-🌎 [Icomm Challenge](https://github.com/PollyanaOliveira)
+🌎 [Icomm Challenge](https://pollyanaoliveira.github.io/icomm-challenge/#/)
 
 ---
