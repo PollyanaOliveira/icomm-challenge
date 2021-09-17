@@ -1,5 +1,6 @@
 {
   "name": "icomm-challenge",
+  "homepage": "icomm-challenge/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
