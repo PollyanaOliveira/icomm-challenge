@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <section>
         <section className="featured__images">
-          <section>
+          <section className="left__content">
             <section className="title__images">
               <p>ÍRIS</p>
               <p>VERÃO</p>
@@ -22,11 +22,10 @@ export default function Home() {
             </section>
             <img src={image5} alt="Destaque Verão" />
           </section>
-          <section className="featured__content">
+          <section className="right__content">
             <section className="title__images">
               <p>LE LIS</p>
               <p>BLAC</p>
-              <br />
             </section>
             <img src={image6} alt="Destaque Le Lis Blanc" />
           </section>
