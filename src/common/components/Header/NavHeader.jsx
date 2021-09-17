@@ -25,7 +25,10 @@ export default function NavHeader() {
           aria-hidden
           onClick={() => clearFavorite()}
         >
-          <div className="nav__favorites">
+          <div
+            className="nav__favorites"
+            data-testid="favorite-icon"
+          >
             {favorite()}
           </div>
         </li>
@@ -34,9 +37,14 @@ export default function NavHeader() {
           aria-hidden
           onClick={() => clearCart()}
         >
-          <div className="nav__cart show__cart">
+          <div className="show__cart">
             <FiShoppingCart className="nav__icon" />
-            <div className="cart__count">{productsInCart}</div>
+            <div
+              className="cart__count"
+              data-testid="shopping-cart-size"
+            >
+              {productsInCart}
+            </div>
           </div>
         </li>
         <div />

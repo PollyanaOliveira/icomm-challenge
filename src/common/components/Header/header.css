@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 6.3rem;
 }
 
 /* NavHeader */
@@ -30,6 +31,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-left: 6.7rem;
 }
 
 .nav__logo h2 {

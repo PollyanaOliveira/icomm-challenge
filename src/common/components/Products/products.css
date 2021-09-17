@@ -5,15 +5,46 @@
   border: 1px solid var(--text-color);
 }
 
+.tag__discount {
+  background-color: #EBD7CE;
+  border: 1px solid #EBD7CE;
+}
+
 .tag__launch {
   background-color: #824D3E;
   border: 1px solid #824D3E;
   color: var(--white-color);
 }
 
-.tag__discount {
-  background-color: #EBD7CE;
-  border: 1px solid #EBD7CE;
+.render__products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 430px;
+  margin-left: var(--mg-1);
+  background-color: var(--white-color);
+  border: 1px solid #EEEEEE;
+  transition: .5s;
+  margin-bottom: var(--mg-4);
+}
+
+.render__products:hover {
+  height: 510px;
+  margin-bottom: 0;
+}
+
+.render__products:hover .buy__button {
+  opacity: 1;
+}
+
+.render__products:hover .instalments__product {
+  margin-bottom: var(--mg-1);
+}
+
+.render__products:hover .favorite__icon {
+  margin-top: -2rem;
 }
 
 .favorite__icon, .title__products, .product__button {
@@ -28,22 +59,10 @@
   transition: .5s;
 }
 
-.render__products:hover .favorite__icon {
-  margin-top: -2rem;
-}
-
 .favorite_button {
   color: var(--second-color);
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.info__products, .instalments__product {
-  font-size: var(--small-font);
-  color: var(--text-color);
-  letter-spacing: .1rem;
-  margin-top: 3px;
-  transition: .5s;
 }
 
 .title__products {
@@ -51,6 +70,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.image__product {
+  align-self: center;
+  height: 285px;
+}
+
+.title__product, .instalments__product {
+  font-size: var(--small-font);
+  color: var(--text-color);
+  letter-spacing: .1rem;
+  margin-top: 3px;
+  transition: .5s;
+}
+
+.title__product {
+  align-self: flex-start;
+  margin-left: .5rem;
+}
+
+.info__products {
+  align-self: flex-start;
+  margin-left: 1rem;
+}
+
+.price__product {
+  font-size: calc(var(--small-font) + 2px);
+  margin-top: var(--mg-05);
+  font-weight: var(--font-bold);
 }
 
 .buy__button {
@@ -68,41 +116,4 @@
 
 .buy__button:hover {
   color: var(--title-home-color);
-}
-
-.render__products:hover .buy__button {
-  opacity: 1;
-}
-
-.products__main {
-  display: flex;
-  justify-content: center;
-}
-
-.render__products:hover {
-  height: 510px;
-  margin-bottom: 0;
-}
-
-.render__products {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 430px;
-  margin-left: var(--mg-1);
-  background-color: var(--white-color);
-  border: 1px solid #EEEEEE;
-  transition: .5s;
-  margin-bottom: var(--mg-4);
-} */
-
-.render__products:hover {
-  height: 510px;
-  margin-bottom: 0;
-}
-
-.render__products:hover .instalments__product {
-  margin-bottom: var(--mg-1);
 }

@@ -7,6 +7,10 @@ export const widthScreen = styled.div`
 `;
 
 export const Carousel = styled.div`
+.rec.rec-carousel-item {
+  width: 255px;
+}
+
 .rec.rec-arrow {
   height: 55px;
   background-color: #C4C4C4;
@@ -29,6 +33,6 @@ export const Carousel = styled.div`
 }
 
 .sc-jSgvzq {
-  width: 100vw;
+  width: 85vw;
 }
 `;

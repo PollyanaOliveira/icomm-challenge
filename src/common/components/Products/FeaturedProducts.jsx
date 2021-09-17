@@ -36,50 +36,52 @@ export default function FeaturedProducts() {
   const renderTagAndFavorite = (id, tag, product) => {
     const productExist = itemsFavorite.find((item) => item.id === id);
     return (
-      <div className="favorite__icon">
+      <section className="favorite__icon">
         <p className={tagsProducts(tag)}>{tag}</p>
         <button
+          data-testid="favorite_button"
           className="favorite_button"
           type="button"
           onClick={() => favoriteProduct(id, product)}
         >
           {(productExist) ? <FaHeart /> : <FaRegHeart />}
         </button>
-      </div>
+      </section>
     );
   };
 
   const renderTitleAndImage = (title, image) => (
-    <div className="info__products">
-      <img src={image} alt="produto" />
-      <h3 className="title__product">{title}</h3>
-    </div>
+    <section className="title__products">
+      <img src={image} alt="produto" className="image__product" data-testid="image_product" />
+      <h3 data-testid="title_product" className="title__product">{title}</h3>
+    </section>
   );
 
   const renderPriceAndInstalments = (price, instalments) => (
-    <div className="info__products">
-      <div className="price__product">
+    <section className="info__products">
+      <section data-testid="price_product" className="price__product">
         {`R$ ${price.toLocaleString('pt-br', { digits: 2 })}`}
-      </div>
-      <p className="instalments__product">{instalments}</p>
-    </div>
+      </section>
+      <p data-testid="instalments_product" className="instalments__product">{instalments}</p>
+    </section>
   );
 
   const buyButton = (id, product) => (
-    <div className="product__button">
+    <section className="product__button">
       <button
+        data-testid="buy_button"
         className="buy__button"
         type="button"
         onClick={() => addCart(id, product)}
       >
         COMPRAR
       </button>
-    </div>
+    </section>
   );
 
   const renderCard = () => (
     <section>
-      <div className="products__main">
+      <section data-testid="all_products">
         <Styled.Carousel>
           <Carousel breakPoints={breakPoints}>
             {products.map((product) => {
@@ -87,17 +89,17 @@ export default function FeaturedProducts() {
                 id, tag, title, image, price, instalments,
               } = product;
               return (
-                <div className="render__products">
+                <section className="render__products">
                   {renderTagAndFavorite(id, tag, product)}
                   {renderTitleAndImage(title, image)}
                   {renderPriceAndInstalments(price, instalments)}
                   {buyButton(id, product)}
-                </div>
+                </section>
               );
             })}
           </Carousel>
         </Styled.Carousel>
-      </div>
+      </section>
     </section>
   );
 

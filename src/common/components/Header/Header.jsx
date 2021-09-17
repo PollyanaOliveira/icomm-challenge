@@ -12,6 +12,7 @@ export default function Header() {
     <header className="header">
       <nav className="nav">
         <button
+          data-testid="button_logo"
           className="nav__logo"
           type="button"
           onClick={() => history.push('/')}

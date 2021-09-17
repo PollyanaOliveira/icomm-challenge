@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Header from '../../components/Header/Header';
-// import CarouselProducts from '../../components/Carousel/CarouselProducts';
 import FeaturedProducts from '../../components/Products/FeaturedProducts';
 
 import './home.css';
@@ -13,25 +12,19 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <section className="home__main">
+      <section>
         <section className="featured__images">
           <section>
-            <p className="title__images">
-              ÍRIS
-              <br />
-              VERÃO
-              <br />
-              <img src={image5} alt="Destaque Verão" />
-            </p>
+            <h1 className="title__images">
+              ÍRIS VERÃO 2022
+            </h1>
+            <img src={image5} alt="Destaque Verão" />
           </section>
           <section>
             <p className="title__images">
-              LE LIS
-              <br />
-              BLAC
-              <br />
-              <img src={image6} alt="Destaque Le Lis Blanc" />
+              LE LIS BLAC
             </p>
+            <img src={image6} alt="Destaque Le Lis Blanc" />
           </section>
         </section>
         <section className="featured__products">
