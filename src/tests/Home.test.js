@@ -10,7 +10,7 @@ import FeaturedProducts from '../common/components/Products/FeaturedProducts';
 
 afterEach(cleanup);
 
-describe.only('Verifica elementos do Home', () => {
+describe('Verifica elementos do Home', () => {
   it('Verifica se há dois título "ÍRIS VERÃO 2022" e "LE LIS BLAC"', () => {
     const { getByText } = renderWithRouter(
       <Home>
