@@ -1,33 +1,33 @@
 .tag__summer, .tag__launch, .tag__discount {
-  font-size: .8rem;
-  padding: 5px;
-  color: var(--text-color);
   border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-size: .8rem;
+  padding: .3rem;
 }
 
 .tag__discount {
-  background-color: #EBD7CE;
-  border: 1px solid #EBD7CE;
+  background-color: var(--discount-color);
+  border: var(--discount-color) 1px solid;
 }
 
 .tag__launch {
-  background-color: #824D3E;
-  border: 1px solid #824D3E;
+  background-color: var(--tag-color);
+  border: var(--tag-color) 1px solid;
   color: var(--white-color);
 }
 
 .render__products {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 240px;
-  height: 430px;
-  margin-left: var(--mg-1);
   background-color: var(--white-color);
-  border: 1px solid #EEEEEE;
-  transition: .5s;
+  border: var(--card-color) 1px solid;
+  flex-direction: column;
+  height: 430px;
+  justify-content: center;
   margin-bottom: var(--mg-4);
+  margin-left: var(--mg-1);
+  transition: .5s;
+  width: 240px;
 }
 
 .render__products:hover {
@@ -39,10 +39,6 @@
   opacity: 1;
 }
 
-/* .render__products:hover .instalments__product {
-  margin-bottom: var(--mg-1);
-} */
-
 .render__products:hover .favorite__icon {
   margin-top: -3rem;
 }
@@ -53,23 +49,23 @@
 
 .favorite__icon {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-top: -0.5rem;
   transition: .5s;
 }
 
 .favorite_button {
   color: var(--second-color);
-  font-size: 1.6rem;
   cursor: pointer;
+  font-size: 1.6rem;
 }
 
 .title__products {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .image__product {
@@ -78,8 +74,8 @@
 }
 
 .title__product, .instalments__product {
-  font-size: var(--small-font);
   color: var(--text-color);
+  font-size: var(--small-font);
   letter-spacing: .1rem;
   margin-top: 3px;
   transition: .5s;
@@ -97,25 +93,25 @@
 
 .price__product {
   font-size: calc(var(--small-font) + 2px);
-  margin-top: var(--mg-05);
   font-weight: var(--font-bold);
+  margin-top: var(--mg-05);
 }
 
 .product__button {
+  margin-bottom: -3rem;
   opacity: 0;
   transition: .5s;
-  margin-bottom: -3rem;
 }
 
 .buy__button {
+  cursor: pointer;
   background-color: var(--first-color);
   color: var(--white-color);
   font-family: var(--second-font);
   font-weight: var(--font-semi-bold);
   letter-spacing: 1px;
-  width: 100%;
   padding: .75rem 0;
-  cursor: pointer;
+  width: 100%;
 }
 
 .buy__button:hover {

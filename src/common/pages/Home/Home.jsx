@@ -15,15 +15,19 @@ export default function Home() {
       <section>
         <section className="featured__images">
           <section>
-            <h1 className="title__images">
-              ÍRIS VERÃO 2022
-            </h1>
+            <section className="title__images">
+              <p>ÍRIS</p>
+              <p>VERÃO</p>
+              <p>2022</p>
+            </section>
             <img src={image5} alt="Destaque Verão" />
           </section>
-          <section>
-            <p className="title__images">
-              LE LIS BLAC
-            </p>
+          <section className="featured__content">
+            <section className="title__images">
+              <p>LE LIS</p>
+              <p>BLAC</p>
+              <br />
+            </section>
             <img src={image6} alt="Destaque Le Lis Blanc" />
           </section>
         </section>

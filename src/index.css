@@ -9,7 +9,10 @@
   --first-color:#824D3E;
   --second-color: #C42130;
   --third-color: #444444;
+  --discount-color: #EBD7CE;
   --title-color: #161212;
+  --card-color: #EEEEEE;
+  --tag-color: #824D3E;
   --title-home-color: #5361FF;
   --text-color: #666666;
   --body-color: ##E5E5E5;
@@ -23,11 +26,11 @@
   /* FONT AND SIZE */
   --first-font: 'Nunito', sans-serif;
   --second-font: 'Montserrat', sans-serif;
-  --font-h2: 1.25rem;
-  --font-h3: 1.125rem;
+  --font-h2: 1.24rem;
+  --font-h3: 1.124rem;
   --font-icon: 1.5rem;
-  --little-font: .938rem;
-  --small-font: .813rem;
+  --little-font: .937rem;
+  --small-font: .814rem;
   --normal-font: 1.3rem;
   --big-font: 2rem;
 
