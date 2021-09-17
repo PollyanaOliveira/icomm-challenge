@@ -37,7 +37,7 @@ export default function FeaturedProducts() {
     const productExist = itemsFavorite.find((item) => item.id === id);
     return (
       <section className="favorite__icon">
-        <p className={tagsProducts(tag)}>{tag}</p>
+        <p data-testid="tag_products" className={tagsProducts(tag)}>{tag}</p>
         <button
           data-testid="favorite_button"
           className="favorite_button"
