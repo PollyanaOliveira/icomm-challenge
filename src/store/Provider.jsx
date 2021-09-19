@@ -66,6 +66,7 @@ export default function Provider({ children }) {
 
   const clearCart = () => {
     setCart([]);
+    setLocalStorage(LSCart, []);
   };
 
   const context = {
