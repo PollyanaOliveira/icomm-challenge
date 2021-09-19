@@ -11,12 +11,12 @@
 
 - [Objetivos do Projeto](#objetivos)
 - [Roteiro](#roteiro)
-- - [Detalhes do Projeto](#detalhes)
+  - [Detalhes do Projeto](#detalhes)
 - [Tecnologias Utilizadas](#tecnologias)
 - [Protótipo do Projeto](#prototipo)
 - [Para Iniciar o Projeto](#iniciar)
 - [Deploy](#deploy)
-- - [Importante](#importante)
+  - [Importante](#importante)
 
 <div id="objetivos">
   
