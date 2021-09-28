@@ -62,6 +62,7 @@ export default function Provider({ children }) {
 
   const clearFavorite = () => {
     setItemsFavorite([]);
+    setLocalStorage(LSFavorite, []);
   };
 
   const clearCart = () => {
