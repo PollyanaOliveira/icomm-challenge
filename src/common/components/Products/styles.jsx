@@ -7,12 +7,12 @@ export const widthScreen = styled.div`
 `;
 
 export const Carousel = styled.div`
-// .rec.rec-carousel-item {
-//   width: 260px;
-// }
+.rec.rec-carousel-item {
+  width: 255px;
+}
 
 .rec.rec-carousel {
-  width: 1120px;
+  width: 1142px;
 }
 
 .rec.rec-arrow {
