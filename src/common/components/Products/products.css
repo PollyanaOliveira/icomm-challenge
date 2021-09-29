@@ -27,7 +27,7 @@
   margin-bottom: var(--mg-4);
   margin-left: var(--mg-1);
   transition: .5s;
-  width: 240px;
+  width: 250px;
 }
 
 .render__products:hover {
