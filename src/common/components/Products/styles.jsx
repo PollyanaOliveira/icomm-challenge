@@ -12,7 +12,7 @@ export const Carousel = styled.div`
 }
 
 .rec.rec-carousel {
-  width: 1142px;
+  max-width: 1142px;
 }
 
 .rec.rec-arrow {
@@ -20,6 +20,10 @@ export const Carousel = styled.div`
   background-color: #C4C4C4;
   color: #FFF;
   border-radius: 0;
+}
+
+.rec.rec-arrow-left {
+  margin-right: -.5rem;
 }
 
 .rec.rec-arrow:hover {
@@ -37,6 +41,6 @@ export const Carousel = styled.div`
 }
 
 .sc-jSgvzq {
-  width: 85vw;
+  width: 100vw;
 }
 `;
