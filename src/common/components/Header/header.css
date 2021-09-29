@@ -99,11 +99,13 @@
 
 @media screen and (min-width: 768px){
   .show__cart {
-    margin-right: 7.5rem;
+    display: flex;
+    margin-right: 3.2rem;
   }
 
   .nav__logo {
-    margin-left: 6.7rem;
+    display: flex;
+    margin-left: 4.2rem;
   }
 }
 
