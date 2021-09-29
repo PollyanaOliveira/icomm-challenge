@@ -2,7 +2,7 @@
   display: grid;
   justify-content: center;
   margin: 2rem 1rem 0 4rem;
-  width: 50vh;
+  /* width: 50vh; */
 }
 
 .right__content {

@@ -27,7 +27,7 @@
   margin-bottom: var(--mg-4);
   margin-left: var(--mg-1);
   transition: .5s;
-  width: 250px;
+  /* width: 250px; */
 }
 
 .render__products:hover {
@@ -116,4 +116,8 @@
 
 .buy__button:hover {
   color: var(--title-home-color);
+}
+
+.all_products {
+  max-width: 1200px;
 }
