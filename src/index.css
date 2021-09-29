@@ -60,6 +60,9 @@
 
 body {
   font-family: var(--first-font);
+  margin: 0px;
+  align-items: center;
+
 }
 
 h1,h2,h3{
@@ -81,7 +84,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 

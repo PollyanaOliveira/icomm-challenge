@@ -10,8 +10,12 @@
 }
 
 .featured__images img {
-  width: 100%;
-  margin-left: 2.5rem;
+  /* width: 50%;
+  margin-left: 2.5rem; */
+  max-width: 100%;
+  width: 200px;
+  height: 200px;
+  /* object-fit: cover; */
 }
 
 .title__images p {
@@ -39,13 +43,14 @@
   }
 
 .left__content {
-  margin-left: 2.3rem;
-  margin-right: .2rem;
+  margin-left: 6rem;
+  margin-right: .1rem;
 }
 
 .right__content {
-  margin-left: .2rem;
+  margin-left: .1rem;
   margin-top: 25px;
+  margin-right: 4rem;
 }
 
   .title__images p {
