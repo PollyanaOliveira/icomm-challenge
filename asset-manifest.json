@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/icomm-challenge/static/css/main.c8bc1a39.chunk.css",
-    "main.js": "/icomm-challenge/static/js/main.ca6dcfe2.chunk.js",
-    "main.js.map": "/icomm-challenge/static/js/main.ca6dcfe2.chunk.js.map",
+    "main.css": "/icomm-challenge/static/css/main.aee82b03.chunk.css",
+    "main.js": "/icomm-challenge/static/js/main.dd2c4ebb.chunk.js",
+    "main.js.map": "/icomm-challenge/static/js/main.dd2c4ebb.chunk.js.map",
     "runtime-main.js": "/icomm-challenge/static/js/runtime-main.69b20f99.js",
     "runtime-main.js.map": "/icomm-challenge/static/js/runtime-main.69b20f99.js.map",
     "static/js/2.2bd974f2.chunk.js": "/icomm-challenge/static/js/2.2bd974f2.chunk.js",
     "static/js/2.2bd974f2.chunk.js.map": "/icomm-challenge/static/js/2.2bd974f2.chunk.js.map",
     "index.html": "/icomm-challenge/index.html",
-    "static/css/main.c8bc1a39.chunk.css.map": "/icomm-challenge/static/css/main.c8bc1a39.chunk.css.map",
+    "static/css/main.aee82b03.chunk.css.map": "/icomm-challenge/static/css/main.aee82b03.chunk.css.map",
     "static/js/2.2bd974f2.chunk.js.LICENSE.txt": "/icomm-challenge/static/js/2.2bd974f2.chunk.js.LICENSE.txt",
     "static/media/image_1.28cc92d9.png": "/icomm-challenge/static/media/image_1.28cc92d9.png",
     "static/media/image_2.d09fd7a8.png": "/icomm-challenge/static/media/image_2.d09fd7a8.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.69b20f99.js",
     "static/js/2.2bd974f2.chunk.js",
-    "static/css/main.c8bc1a39.chunk.css",
-    "static/js/main.ca6dcfe2.chunk.js"
+    "static/css/main.aee82b03.chunk.css",
+    "static/js/main.dd2c4ebb.chunk.js"
   ]
 }
