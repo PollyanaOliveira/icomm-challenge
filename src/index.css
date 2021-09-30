@@ -60,6 +60,8 @@
 
 body {
   font-family: var(--first-font);
+  margin: 0px;
+  align-items: center;
 }
 
 h1,h2,h3{

@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: -2rem;
+  margin-right: 2rem;
 }
 
 /* NavHeader */
@@ -24,6 +24,8 @@
   height: var(--header-height);
   justify-content: space-between;
   margin: 0 var(--mg-3);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .nav__logo {
@@ -31,7 +33,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: -1rem;
+  margin-left: 2rem;
 }
 
 .nav__logo h2 {
@@ -99,11 +101,11 @@
 
 @media screen and (min-width: 768px){
   .show__cart {
-    margin-right: 7.5rem;
+    margin-right: 5.3rem;
   }
 
   .nav__logo {
-    margin-left: 6.7rem;
+    margin-left: 6.4rem;
   }
 }
 
